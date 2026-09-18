@@ -1,0 +1,29 @@
+# 构建输出
+build/
+dist/
+*.exe
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+*.egg
+.venv/
+venv/
+
+# IDE
+.idea/
+.vscode/
+.trae/
+.claude/
+
+# 测试缓存
+.pytest_cache/
+
+# 游戏存档
+game_save.json
+save_data.json
+
+# 系统文件
+Thumbs.db
+.DS_Store
