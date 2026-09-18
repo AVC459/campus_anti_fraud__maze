@@ -1,0 +1,30 @@
+[
+  {
+    "id": "chapter1",
+    "name": "深渊之恋",
+    "description": "网恋诈骗陷阱",
+    "icon": "💕",
+    "unlocked": true
+  },
+  {
+    "id": "chapter2",
+    "name": "赌局陷阱",
+    "description": "网络赌博诈骗",
+    "icon": "🎲",
+    "unlocked": true
+  },
+  {
+    "id": "chapter3",
+    "name": "校园贷危机",
+    "description": "不良网贷诈骗",
+    "icon": "💳",
+    "unlocked": true
+  },
+  {
+    "id": "chapter4",
+    "name": "求职陷阱",
+    "description": "兼职刷单诈骗",
+    "icon": "💼",
+    "unlocked": true
+  }
+]

@@ -1,0 +1,464 @@
+{
+  "id": "chapter4",
+  "name": "求职陷阱",
+  "description": "兼职刷单诈骗",
+  "icon": "💼",
+  "backgrounds": [
+    "index",
+    "dormitory",
+    "campus",
+    "counselor_office",
+    "security_office"
+  ],
+  "script": [
+    {
+      "role": "旁白",
+      "content": "周末，你躺在床上刷着手机。",
+      "bg": "index"
+    },
+    {
+      "role": "系统",
+      "content": "【QQ群消息】招募兼职！抖音点赞员，动动手指就能赚钱，日薪200+！",
+      "bg": "index"
+    },
+    {
+      "role": "心理",
+      "content": "抖音点赞就能赚钱？这也太简单了吧！",
+      "bg": "index"
+    },
+    {
+      "role": "你",
+      "content": "（添加对方QQ）你好，请问是招聘抖音点赞员吗？",
+      "bg": "index"
+    },
+    {
+      "role": "招聘员",
+      "content": "是的呢！我们是正规平台，点赞一单2-5元，日赚200不是梦！",
+      "bg": "index"
+    },
+    {
+      "role": "招聘员",
+      "content": "先关注 + 点赞 + 截图，每单3元，佣金立结！",
+      "bg": "index"
+    },
+    {
+      "role": "招聘员",
+      "content": "想要长期做的话，需要先交99元入会费，返还200元任务佣金！",
+      "bg": "index"
+    },
+    {
+      "role": "心理",
+      "content": "99元入会费...听起来挺合理的，反正能赚回来。",
+      "bg": "index"
+    },
+    {
+      "type": "choice",
+      "content": "【刷单招聘】对方要求交99元入会费...",
+      "bg": "index",
+      "options": [
+        {
+          "text": "【缴纳入会费】好的，我转账给你",
+          "next": 9,
+          "set_flag": "pay_fee"
+        },
+        {
+          "text": "【表示怀疑】这不会是诈骗吧？",
+          "next": 68,
+          "set_flag": "doubt"
+        }
+      ]
+    },
+    {
+      "role": "你",
+      "content": "好的，我转账给你。",
+      "bg": "dormitory"
+    },
+    {
+      "role": "系统",
+      "content": "【转账】你向\"平台财务\"转账99元",
+      "bg": "dormitory",
+      "set_money": -99
+    },
+    {
+      "role": "招聘员",
+      "content": "好的，入会成功！现在给你发送任务。",
+      "bg": "dormitory"
+    },
+    {
+      "role": "招聘员",
+      "content": "【任务】关注\"某某抖音号\"并点赞，截图给我，佣金3元",
+      "bg": "dormitory"
+    },
+    {
+      "role": "你",
+      "content": "（完成任务）好了，截图发你。",
+      "bg": "dormitory"
+    },
+    {
+      "role": "系统",
+      "content": "【到账】+3元 余额：3元",
+      "bg": "dormitory"
+    },
+    {
+      "role": "你",
+      "content": "真的到账了！",
+      "bg": "dormitory"
+    },
+    {
+      "role": "招聘员",
+      "content": "看吧，我们很靠谱的！想要赚更多吗？来做垫付任务吧！",
+      "bg": "dormitory"
+    },
+    {
+      "role": "招聘员",
+      "content": "垫付100元，返回130元，轻松日赚300+！",
+      "bg": "dormitory"
+    },
+    {
+      "role": "心理",
+      "content": "垫付100返130？这...这赚钱也太快了吧？",
+      "bg": "dormitory"
+    },
+    {
+      "role": "招聘员",
+      "content": "手慢无！今天只有10个名额！",
+      "bg": "dormitory"
+    },
+    {
+      "type": "choice",
+      "content": "【垫付任务】对方邀请你做垫付任务，100元返130元...",
+      "bg": "dormitory",
+      "options": [
+        {
+          "text": "【接受垫付任务】好的，我来做！",
+          "next": 21,
+          "set_flag": "accept_prepay"
+        },
+        {
+          "text": "【婉拒】我就做点赞任务就好",
+          "next": 60,
+          "set_flag": "only_like"
+        }
+      ]
+    },
+    {
+      "role": "你",
+      "content": "好的，我转100元给你。",
+      "bg": "dormitory"
+    },
+    {
+      "role": "系统",
+      "content": "【转账】你向\"平台财务\"转账100元",
+      "bg": "dormitory",
+      "set_money": -100
+    },
+    {
+      "role": "招聘员",
+      "content": "好的，任务完成！本金+佣金130元已到账！",
+      "bg": "dormitory"
+    },
+    {
+      "role": "系统",
+      "content": "【到账】+130元 余额：133元",
+      "bg": "dormitory"
+    },
+    {
+      "role": "你",
+      "content": "太厉害了！我再做一个！",
+      "bg": "dormitory"
+    },
+    {
+      "role": "招聘员",
+      "content": "好的！这次有个大单，垫付500返650！",
+      "bg": "dormitory"
+    },
+    {
+      "role": "心理",
+      "content": "500返650...这个回报率也太高了吧？但刚才那个确实赚钱了...",
+      "bg": "dormitory"
+    },
+    {
+      "role": "系统",
+      "content": "【转账】你向\"平台财务\"转账500元",
+      "bg": "dormitory",
+      "set_money": -500
+    },
+    {
+      "role": "招聘员",
+      "content": "系统显示任务超时了，需要重新做一单才能提现！",
+      "bg": "dormitory"
+    },
+    {
+      "role": "你",
+      "content": "超时？那我重新做！",
+      "bg": "dormitory"
+    },
+    {
+      "role": "招聘员",
+      "content": "好的，这次需要垫付2000元，才能一起提现650+2000=2600元！",
+      "bg": "dormitory"
+    },
+    {
+      "role": "小高",
+      "content": "小夏，你在干嘛呢？看你一直拿着手机...",
+      "bg": "dormitory"
+    },
+    {
+      "role": "你",
+      "content": "在做兼职呢！刷单赚钱！",
+      "bg": "dormitory"
+    },
+    {
+      "role": "小高",
+      "content": "刷单？这不是诈骗吗！",
+      "bg": "dormitory"
+    },
+    {
+      "role": "小高",
+      "content": "刷单本身就是违法的！而且这种先交钱的一定是诈骗！",
+      "bg": "dormitory"
+    },
+    {
+      "type": "choice",
+      "content": "【刷单陷阱】小高说这是诈骗，你已经转了500元...",
+      "bg": "dormitory",
+      "options": [
+        {
+          "text": "【相信小高】我再转2000就可能被套进去了！及时止损！",
+          "next": 37,
+          "set_flag": "stop_xiaogao"
+        },
+        {
+          "text": "【继续转账】再做一个就能提现了！",
+          "next": 45,
+          "set_flag": "continue_fool"
+        }
+      ]
+    },
+    {
+      "role": "你",
+      "content": "小高说得对！我差点就上当了！",
+      "bg": "dormitory"
+    },
+    {
+      "role": "你",
+      "content": "对不起，我不会再转了！",
+      "bg": "dormitory"
+    },
+    {
+      "role": "招聘员",
+      "content": "你不做的话，之前那500元是提不出来的！",
+      "bg": "dormitory"
+    },
+    {
+      "role": "招聘员",
+      "content": "最后一次机会！再做一单就能拿回所有钱！",
+      "bg": "dormitory"
+    },
+    {
+      "role": "旁白",
+      "content": "你果断拉黑了对方，虽然损失了599元，但及时止损了。",
+      "bg": "dormitory"
+    },
+    {
+      "role": "小高",
+      "content": "你做得对！刷单本身就是违法的，而且这种先交钱的一定是诈骗！",
+      "bg": "dormitory"
+    },
+    {
+      "role": "导员",
+      "content": "小夏，这种刷单兼职都是诈骗！以后要通过正规渠道找兼职。",
+      "bg": "counselor_office"
+    },
+    {
+      "type": "ending",
+      "ending_id": "job_wisdom",
+      "ending_name": "迷途知返",
+      "ending_type": "good",
+      "content": "你在小高的提醒下及时醒悟，没有继续转账，虽然损失了599元，但避免了更大的损失。\n\n—— 结局：迷途知返 ——\n\n恭喜你！你成功识破了刷单诈骗！\n\n刷单本身就是违法行为！任何需要先交钱的兼职都是诈骗！记住：\n1. 抖音点赞、刷单都是诈骗\n2. 高回报一定是陷阱\n3. 发现被骗要及时止损！"
+    },
+    {
+      "role": "你",
+      "content": "再做一个就能提现了！我不能放弃！",
+      "bg": "dormitory"
+    },
+    {
+      "role": "系统",
+      "content": "【转账】你向\"平台财务\"转账2000元",
+      "bg": "dormitory",
+      "set_money": -2000
+    },
+    {
+      "role": "系统",
+      "content": "【任务完成】本金+佣金2600元已到账，请点击提现",
+      "bg": "dormitory"
+    },
+    {
+      "role": "系统",
+      "content": "【提现失败】账户异常，需要转账解冻金3000元",
+      "bg": "dormitory"
+    },
+    {
+      "role": "心理",
+      "content": "又要交钱？这...这不会是连环套吧？",
+      "bg": "dormitory"
+    },
+    {
+      "role": "你",
+      "content": "我没有更多钱了...",
+      "bg": "dormitory"
+    },
+    {
+      "role": "系统",
+      "content": "【消息发送失败】对方已将你拉黑",
+      "bg": "dormitory"
+    },
+    {
+      "role": "系统",
+      "content": "【APP无法打开】",
+      "bg": "dormitory"
+    },
+    {
+      "role": "心理",
+      "content": "我被骗了...599 + 500 + 2000 = 3099元，就这样没了...",
+      "bg": "dormitory"
+    },
+    {
+      "role": "小高",
+      "content": "小夏！你怎么哭丧着脸？",
+      "bg": "dormitory"
+    },
+    {
+      "role": "你",
+      "content": "我...我被骗了3000多块...",
+      "bg": "dormitory"
+    },
+    {
+      "role": "小高",
+      "content": "走！我们去报警！",
+      "bg": "dormitory"
+    },
+    {
+      "role": "旁白",
+      "content": "你和小高一起来到学校保卫处报案。",
+      "bg": "security_office"
+    },
+    {
+      "role": "保卫处老师",
+      "content": "同学，别着急，慢慢说清楚情况。我们会尽力帮你追回损失的。",
+      "bg": "security_office"
+    },
+    {
+      "type": "ending",
+      "ending_id": "job_loss",
+      "ending_name": "血本无归",
+      "ending_type": "bad",
+      "content": "你先后向诈骗分子转账3099元，最终被拉黑删除。\n\n—— 结局：血本无归 ——\n\n刷单诈骗是大学生最常见的诈骗类型！它们先用小利诱惑你，然后逐步引导你投入更多资金。记住：\n1. 刷单本身就是违法的\n2. 需要先交钱的兼职都是诈骗\n3. 发现被骗要立即报警！",
+      "bg": "security_office"
+    },
+    {
+      "role": "你",
+      "content": "算了，我就做点赞任务就好。",
+      "bg": "dormitory"
+    },
+    {
+      "role": "招聘员",
+      "content": "好的，给你发送点赞任务...",
+      "bg": "dormitory"
+    },
+    {
+      "role": "旁白",
+      "content": "你做了几天的点赞任务，虽然赚了点小钱，但发现提现越来越困难。",
+      "bg": "dormitory"
+    },
+    {
+      "role": "系统",
+      "content": "【提现申请中...】预计30天后到账",
+      "bg": "dormitory"
+    },
+    {
+      "role": "系统",
+      "content": "【提现申请中...】账户异常，需要充值解封",
+      "bg": "dormitory"
+    },
+    {
+      "role": "心理",
+      "content": "我就说这东西不靠谱！还好我没交入会费以外的钱！",
+      "bg": "dormitory"
+    },
+    {
+      "role": "旁白",
+      "content": "你果断删除了APP，虽然没赚到钱，但也没损失。",
+      "bg": "dormitory"
+    },
+    {
+      "type": "ending",
+      "ending_id": "job_defense",
+      "ending_name": "保持警惕",
+      "ending_type": "perfect",
+      "content": "你只做了免费的点赞任务，在发现提现困难时及时退出，没有继续投入资金。\n\n—— 结局：保持警惕 ——\n\n恭喜你！你展现了极高的反诈意识！\n\n刷单诈骗的特点就是先给你甜头，等你投入大量资金后就会出问题。记住：任何需要先交钱的兼职都不要做！"
+    },
+    {
+      "role": "你",
+      "content": "等等，这不会是诈骗吧？",
+      "bg": "index"
+    },
+    {
+      "role": "招聘员",
+      "content": "亲，我们是正规平台的，很多大学生都在做呢！",
+      "bg": "index"
+    },
+    {
+      "role": "招聘员",
+      "content": "不信的话，你可以先做几单免费的试试？",
+      "bg": "index"
+    },
+    {
+      "role": "心理",
+      "content": "先免费试试...那倒可以看看。",
+      "bg": "index"
+    },
+    {
+      "role": "旁白",
+      "content": "你做了几单免费点赞任务，确实赚了十几块钱。",
+      "bg": "dormitory"
+    },
+    {
+      "role": "系统",
+      "content": "【到账】+15元",
+      "bg": "dormitory"
+    },
+    {
+      "role": "招聘员",
+      "content": "看吧，我们很靠谱的！想要赚更多就交入会费吧！",
+      "bg": "dormitory"
+    },
+    {
+      "role": "心理",
+      "content": "虽然赚了钱，但每次想提现都说在处理中...还是算了，不交钱了。",
+      "bg": "dormitory"
+    },
+    {
+      "role": "旁白",
+      "content": "几天后，你在校园公告栏看到了防诈骗宣传。",
+      "bg": "campus"
+    },
+    {
+      "role": "系统",
+      "content": "【警示】近期有人以抖音刷单名义实施诈骗，请大家提高警惕！",
+      "bg": "campus"
+    },
+    {
+      "role": "心理",
+      "content": "还好我当时没有交入会费！那些说能赚钱的都是骗人的！",
+      "bg": "campus"
+    },
+    {
+      "type": "ending",
+      "ending_id": "job_early",
+      "ending_name": "防微杜渐",
+      "ending_type": "perfect",
+      "content": "你在对方要求交入会费时保持了警惕，没有上当受骗。\n\n—— 结局：防微杜渐 ——\n\n恭喜你！你展现了极高的反诈意识！\n\n你的谨慎让你成功避开了刷单诈骗的陷阱！记住：天上不会掉馅饼，任何轻松赚钱的方法都可能是陷阱！"
+    }
+  ]
+}

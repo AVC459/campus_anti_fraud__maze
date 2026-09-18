@@ -1,0 +1,290 @@
+{
+  "id": "chapter3",
+  "name": "校园贷危机",
+  "description": "不良网贷诈骗",
+  "icon": "💳",
+  "backgrounds": [
+    "index",
+    "dormitory",
+    "classroom",
+    "campus",
+    "counselor_office",
+    "security_office"
+  ],
+  "script": [
+    {
+      "role": "旁白",
+      "content": "双十一购物节，你的室友们都在买买买。",
+      "bg": "index"
+    },
+    {
+      "role": "旁白",
+      "content": "看着他们收到一个个快递，你心里有些不是滋味。",
+      "bg": "index"
+    },
+    {
+      "role": "你",
+      "content": "唉...这个月生活费已经见底了，买不起想要的东西。",
+      "bg": "index"
+    },
+    {
+      "role": "旁白",
+      "content": "突然，你收到了一条短信。",
+      "bg": "index"
+    },
+    {
+      "role": "系统",
+      "content": "【低息贷款】无视黑白户，秒批3万！点击链接即可申请...",
+      "bg": "index"
+    },
+    {
+      "role": "心理",
+      "content": "3万块...利息很低的样子？反正就点一下看看呗。",
+      "bg": "index"
+    },
+    {
+      "role": "旁白",
+      "content": "你点击链接，下载了一个名为\"校园贷\"的APP。",
+      "bg": "dormitory"
+    },
+    {
+      "role": "系统",
+      "content": "【注册成功】欢迎来到校园贷！您可借额度：5000元",
+      "bg": "dormitory"
+    },
+    {
+      "role": "你",
+      "content": "哇，真的能借到钱！",
+      "bg": "dormitory"
+    },
+    {
+      "role": "心理",
+      "content": "买下那个心仪已久的耳机应该没问题吧？反正下个月生活费就来了。",
+      "bg": "dormitory"
+    },
+    {
+      "role": "系统",
+      "content": "【借款成功】您已借款2000元，到账1980元（扣除利息20元）",
+      "bg": "dormitory",
+      "set_money": -2000
+    },
+    {
+      "role": "你",
+      "content": "太好了！钱到账了！",
+      "bg": "dormitory"
+    },
+    {
+      "role": "旁白",
+      "content": "一个月后，还款日到了...",
+      "bg": "dormitory"
+    },
+    {
+      "role": "系统",
+      "content": "【还款提醒】您有一笔2000元贷款已逾期，利息为每天50元...",
+      "bg": "dormitory"
+    },
+    {
+      "role": "你",
+      "content": "什么？！每天50元利息？这不是高利贷吗！",
+      "bg": "dormitory"
+    },
+    {
+      "role": "系统",
+      "content": "【威胁短信】请尽快还款！否则我们将联系你的学校和家人！",
+      "bg": "dormitory"
+    },
+    {
+      "role": "心理",
+      "content": "完了完了...这下怎么办？他们说要联系我爸妈...",
+      "bg": "dormitory"
+    },
+    {
+      "role": "小高",
+      "content": "小夏，你脸色怎么这么差？",
+      "bg": "dormitory"
+    },
+    {
+      "type": "choice",
+      "content": "【贷款逾期】你收到了威胁短信，小高发现了你的异常...",
+      "bg": "dormitory",
+      "options": [
+        {
+          "text": "【向小高坦白】我...我借了高利贷",
+          "next": 19,
+          "set_flag": "confide_xiaogao"
+        },
+        {
+          "text": "【隐瞒过去】没...没什么，就是没睡好",
+          "next": 31,
+          "set_flag": "hide_it"
+        },
+        {
+          "text": "【再借新债】我再借点钱先把旧债还上",
+          "next": 40,
+          "set_flag": "more_debt"
+        }
+      ]
+    },
+    {
+      "role": "你",
+      "content": "小高，我...我借了高利贷，现在还不上了...",
+      "bg": "dormitory"
+    },
+    {
+      "role": "小高",
+      "content": "什么？！你怎么会借那种东西！",
+      "bg": "dormitory"
+    },
+    {
+      "role": "小高",
+      "content": "走！我们现在就去找导员！",
+      "bg": "dormitory"
+    },
+    {
+      "role": "旁白",
+      "content": "导员办公室内...",
+      "bg": "counselor_office"
+    },
+    {
+      "role": "导员",
+      "content": "这种就是典型的校园贷诈骗！专门针对你们这些大学生！",
+      "bg": "counselor_office"
+    },
+    {
+      "role": "导员",
+      "content": "别怕，这种贷款的利息是不受法律保护的。",
+      "bg": "counselor_office"
+    },
+    {
+      "role": "导员",
+      "content": "而且他们威胁你们联系学校本身就是违规行为。",
+      "bg": "counselor_office"
+    },
+    {
+      "role": "导员",
+      "content": "我会帮你报警处理，记住，以后缺钱可以找学校申请助学金。",
+      "bg": "counselor_office"
+    },
+    {
+      "role": "旁白",
+      "content": "在导员的帮助下，你向公安机关报案。",
+      "bg": "security_office"
+    },
+    {
+      "role": "警察",
+      "content": "这种校园贷APP都是非法的，我们会依法查处。",
+      "bg": "security_office"
+    },
+    {
+      "role": "警察",
+      "content": "你只需要偿还合法本金，不需要还那些高额利息！",
+      "bg": "security_office"
+    },
+    {
+      "type": "ending",
+      "ending_id": "loan_help",
+      "ending_name": "绝处逢生",
+      "ending_type": "good",
+      "content": "你及时向导员求助，在学校和警方的帮助下成功摆脱了校园贷陷阱。\n\n—— 结局：绝处逢生 ——\n\n恭喜你！你成功脱离了校园贷诈骗！\n\n遭遇校园贷不要害怕，一定要及时向学校、警方求助！记住：\n1. 正规贷款不会收取高额逾期费\n2. 威胁联系学校家人的都是诈骗\n3. 非法校园贷不受法律保护"
+    },
+    {
+      "role": "你",
+      "content": "没...没什么，就是没睡好。",
+      "bg": "dormitory"
+    },
+    {
+      "role": "旁白",
+      "content": "你每天都很心慌，试图隐瞒，但不停地收到催债电话和短信...",
+      "bg": "dormitory"
+    },
+    {
+      "role": "系统",
+      "content": "【轰炸通讯录】我们已给你的所有联系人发送了催款短信！",
+      "bg": "dormitory"
+    },
+    {
+      "role": "旁白",
+      "content": "你的爸妈、老师、同学都收到了催款短信，你的生活彻底乱了。",
+      "bg": "dormitory"
+    },
+    {
+      "role": "你",
+      "content": "对不起大家...我不该借那个钱的...",
+      "bg": "dormitory"
+    },
+    {
+      "role": "小高",
+      "content": "小夏，到底发生什么事了？大家都收到奇怪的短信了！",
+      "bg": "dormitory"
+    },
+    {
+      "role": "你",
+      "content": "我...我借了校园贷，现在利滚利已经还不起了...",
+      "bg": "dormitory"
+    },
+    {
+      "role": "小高",
+      "content": "你怎么不早说！走，我们现在就去找导员！",
+      "bg": "dormitory"
+    },
+    {
+      "type": "ending",
+      "ending_id": "loan_late",
+      "ending_name": "悔之晚矣",
+      "ending_type": "bad",
+      "content": "由于你没有及时求助，校园贷的暴力催收严重影响了你的生活和学习。\n\n—— 结局：悔之晚矣 ——\n\n校园贷的危害极大！它们会用各种手段逼迫你还款，包括轰炸通讯录、威胁恐吓等。记住：遭遇校园贷一定要及时求助，不要一个人扛着！"
+    },
+    {
+      "role": "心理",
+      "content": "再借点钱先把旧债还上...对，这个方法应该可行！",
+      "bg": "dormitory"
+    },
+    {
+      "role": "旁白",
+      "content": "你又下载了几个贷款APP，试图以贷养贷...",
+      "bg": "dormitory"
+    },
+    {
+      "role": "系统",
+      "content": "【新贷款到账】2000元（其中1500元已自动还款）",
+      "bg": "dormitory"
+    },
+    {
+      "role": "心理",
+      "content": "这个月是还上了，但...下个月呢？",
+      "bg": "dormitory"
+    },
+    {
+      "role": "旁白",
+      "content": "三个月后，你的欠款已经累计到了5万元。",
+      "bg": "dormitory"
+    },
+    {
+      "role": "系统",
+      "content": "【催债电话】再不还钱我们就去找你爸妈！",
+      "bg": "dormitory"
+    },
+    {
+      "role": "你",
+      "content": "对不起...我撑不下去了...",
+      "bg": "dormitory"
+    },
+    {
+      "role": "旁白",
+      "content": "你终于向家人坦白了。母亲连夜坐车来学校，帮你还清了贷款。",
+      "bg": "dormitory"
+    },
+    {
+      "role": "母亲",
+      "content": "傻孩子，怎么不早说呢？以后可不能再碰这些东西了！",
+      "bg": "dormitory"
+    },
+    {
+      "type": "ending",
+      "ending_id": "loan_family",
+      "ending_name": "家难临头",
+      "ending_type": "bad",
+      "content": "你因为以贷养贷，欠款越滚越多，最终还是连累了家人。\n\n—— 结局：家难临头 ——\n\n以贷养贷只会让债务越滚越大！校园贷是无底洞，一旦陷入就很难自拔。记住：量入为出，理性消费，远离校园贷！"
+    }
+  ]
+}

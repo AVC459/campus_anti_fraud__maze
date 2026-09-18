@@ -1,0 +1,1067 @@
+{
+  "id": "chapter2",
+  "name": "赌局陷阱",
+  "description": "网络赌博诈骗",
+  "icon": "🎲",
+  "backgrounds": [
+    "index",
+    "pg1",
+    "pg2",
+    "pg3",
+    "canteen",
+    "counselor_office",
+    "security_office",
+    "playground"
+  ],
+  "script": [
+    {
+      "role": "旁白",
+      "content": "九月，咸师。晚自习的铃声刚落，教学楼里涌出三三两两的学生。",
+      "bg": "index"
+    },
+    {
+      "role": "旁白",
+      "content": "你——小夏，大三学生，拖着灌了铅似的双腿走出教学楼。书包里还装着下午在咸师校门口发传单剩下的一叠广告纸。",
+      "bg": "index"
+    },
+    {
+      "role": "心理",
+      "content": "又是疲惫的一天...这个月的生活费已经见底了，周末还得去兼职。发一天传单才80块，够吃几天饭呢...",
+      "bg": "index",
+      "show_characters": ["xiaxia"]
+    },
+    {
+      "role": "旁白",
+      "content": "九月的晚风带着些许凉意，路灯把你的影子拉得很长。",
+      "bg": "index"
+    },
+    {
+      "role": "旁白",
+      "content": "推开宿舍门，一股泡面的香气混杂着汗味扑面而来。",
+      "bg": "index"
+    },
+    {
+      "role": "老蛋",
+      "content": "哟，小夏回来了！听说你又去发传单了？这么拼干嘛！",
+      "bg": "index",
+      "show_characters": ["laodan"]
+    },
+    {
+      "role": "你",
+      "content": "唉，没办法啊老蛋，生活费不够用，不兼职不行啊。",
+      "bg": "index",
+      "show_characters": ["xiaxia"]
+    },
+    {
+      "role": "心理",
+      "content": "老蛋是我的同班同学，平时吊儿郎当的，但出手很大方，经常请大家吃饭。听说他家条件不错。",
+      "bg": "index",
+      "show_characters": ["xiaxia"]
+    },
+    {
+      "role": "老蛋",
+      "content": "巧了！我最近发现个轻松挣钱的路子，想不想试试？",
+      "bg": "index",
+      "show_characters": ["laodan"]
+    },
+    {
+      "role": "你",
+      "content": "轻松挣钱？别逗我了，天上还能掉馅饼不成？",
+      "bg": "index",
+      "show_characters": ["xiaxia"]
+    },
+    {
+      "role": "老蛋",
+      "content": "你还真别不信！我前两天随便玩了两把，提现了200块出来！",
+      "bg": "index",
+      "show_characters": ["laodan"],
+      "hidden_clue": "clue_1"
+    },
+    {
+      "role": "心理",
+      "content": "200块？那可是我发两天传单才能赚到的钱啊...",
+      "bg": "index",
+      "show_characters": ["xiaxia"]
+    },
+    {
+      "role": "老蛋",
+      "content": "来来来，我给你看看，我骗你干嘛！",
+      "bg": "pg1",
+      "show_characters": ["laodan"]
+    },
+    {
+      "role": "旁白",
+      "content": "老蛋神秘地从枕头下掏出手机，屏幕上是一个界面简陋的APP。",
+      "bg": "pg1"
+    },
+    {
+      "role": "心理",
+      "content": "界面很粗糙，配色也很土...但余额显示那一栏明明白白写着520元。",
+      "bg": "pg1",
+      "show_characters": ["xiaxia"]
+    },
+    {
+      "role": "旁白",
+      "content": "你注意到老蛋拿手机的手微微颤抖了一下，但他很快掩饰过去了。",
+      "bg": "pg1",
+      "hidden_clue": "clue_hint_1"
+    },
+    {
+      "role": "老蛋",
+      "content": "来来来，我带你玩，先冲50试试水！",
+      "bg": "pg1",
+      "show_characters": ["laodan"]
+    },
+    {
+      "role": "心理",
+      "content": "50块...不多不少，就算输了也不至于太心疼。试试也无妨？",
+      "bg": "pg1",
+      "show_characters": ["xiaxia"]
+    },
+    {
+      "role": "旁白",
+      "content": "你看着老蛋熟练地操作着APP，心想这钱来得也太容易了吧...",
+      "bg": "pg1"
+    },
+    {
+      "role": "系统",
+      "content": "【第一次下注】50元 → 赢了！余额：75元",
+      "bg": "pg1"
+    },
+    {
+      "role": "你",
+      "content": "哇，真的能赢！",
+      "bg": "pg1",
+      "show_characters": ["xiaxia"]
+    },
+    {
+      "role": "心理",
+      "content": "心跳突然加速，指尖都有些发麻。这钱来得也太容易了吧？",
+      "bg": "pg1",
+      "show_characters": ["xiaxia"]
+    },
+    {
+      "role": "老蛋",
+      "content": "对吧！我就说靠谱！运气不错啊小夏，继续继续！",
+      "bg": "pg1",
+      "show_characters": ["laodan"]
+    },
+    {
+      "type": "choice",
+      "content": "【第一次赢钱后】50元变75元，老蛋怂恿你继续下注...",
+      "bg": "pg1",
+      "options": [
+        {
+          "text": "【继续下注】再来一把！把本金赚得更多！",
+          "next": 24,
+          "set_flag": "continue_bet"
+        },
+        {
+          "text": "【见好就收】差不多了，我先提现吧",
+          "next": 147,
+          "set_flag": "quit_early"
+        }
+      ]
+    },
+    {
+      "role": "心理",
+      "content": "要不...再试一次？反正刚才已经赢了25块，本金都回来了。",
+      "bg": "pg1",
+      "show_characters": ["xiaxia"]
+    },
+    {
+      "role": "老蛋",
+      "content": "来，加大注码！200！一把梭哈！",
+      "bg": "pg1",
+      "show_characters": ["laodan"]
+    },
+    {
+      "role": "心理",
+      "content": "你一咬牙，点击了下注按钮...",
+      "bg": "pg1",
+      "show_characters": ["xiaxia"]
+    },
+    {
+      "role": "系统",
+      "content": "【第二次下注】200元 → 赢了！余额：500元",
+      "bg": "pg1"
+    },
+    {
+      "role": "你",
+      "content": "太厉害了！500块！晚上我请你吃担担面！",
+      "bg": "pg1",
+      "show_characters": ["xiaxia"],
+      "effect": {"set_flag": "generous"}
+    },
+    {
+      "role": "旁白",
+      "content": "你们去了食堂，一碗热腾腾的担担面下肚，你觉得生活从未如此轻松。",
+      "bg": "canteen"
+    },
+    {
+      "role": "老蛋",
+      "content": "客气啥！这才刚开始呢，明天带你玩更大的！",
+      "bg": "canteen",
+      "show_characters": ["laodan"],
+      "hidden_clue": "clue_2"
+    },
+    {
+      "role": "旁白",
+      "content": "那天晚上，你躺在床上，手机屏幕的光映在天花板上。",
+      "bg": "pg1"
+    },
+    {
+      "role": "心理",
+      "content": "那500元的数字在我眼前晃来晃去，怎么也睡不着。要是多赢点，下个月生活费就不用愁了...",
+      "bg": "pg1",
+      "show_characters": ["xiaxia"]
+    },
+    {
+      "role": "旁白",
+      "content": "第二天清晨，天刚蒙蒙亮，你就迫不及待地打开了那个APP。",
+      "bg": "pg2"
+    },
+    {
+      "role": "心理",
+      "content": "昨晚那个500还在脑海里转悠...今天再赢点就收手！",
+      "bg": "pg2",
+      "show_characters": ["xiaxia"]
+    },
+    {
+      "role": "旁白",
+      "content": "你正要下注，心里突然有些犹豫。",
+      "bg": "pg2"
+    },
+    {
+      "type": "choice",
+      "content": "清晨的冲动，你真的要把昨晚赢的500元再投进去吗？",
+      "bg": "pg2",
+      "options": [
+        {
+          "text": "【投入500元】趁运气还在，赚顿大餐！",
+          "next": 37
+        },
+        {
+          "text": "【及时收手】不贪心，见好就收才是赢家",
+          "next": 155
+        }
+      ]
+    },
+    {
+      "role": "系统",
+      "content": "【下注】500元 → 输了！余额：0元",
+      "bg": "pg2",
+      "set_money": -500
+    },
+    {
+      "role": "心理",
+      "content": "怎么会这样...一定是运气不好！再试一次！肯定能赢回来！",
+      "bg": "pg2",
+      "show_characters": ["xiaxia"]
+    },
+    {
+      "role": "旁白",
+      "content": "你紧盯着屏幕，手心开始冒汗。",
+      "bg": "pg2"
+    },
+    {
+      "type": "choice",
+      "content": "刚才输了500元，你要再从生活费里掏500元充值进去翻本吗？",
+      "bg": "pg2",
+      "options": [
+        {
+          "text": "【再充500元】不服气，一定要把钱赢回来！",
+          "next": 41
+        },
+        {
+          "text": "【及时止损】感觉不对劲，就当花500块买个教训",
+          "next": 160
+        }
+      ]
+    },
+    {
+      "role": "系统",
+      "content": "【下注】500元 → 输了！余额：0元",
+      "bg": "pg2",
+      "set_money": -500
+    },
+    {
+      "role": "心理",
+      "content": "不不不...一定是哪里出了问题！老蛋明明赢了的...",
+      "bg": "pg2",
+      "show_characters": ["xiaxia"]
+    },
+    {
+      "role": "旁白",
+      "content": "老蛋不知什么时候站在了你的身后。",
+      "bg": "pg2"
+    },
+    {
+      "role": "老蛋",
+      "content": "别急别急！这种情况我遇到过，下一把肯定能翻本！",
+      "bg": "pg2",
+      "show_characters": ["laodan"]
+    },
+    {
+      "role": "心理",
+      "content": "老蛋说得对，赌徒最忌讳的就是心态不稳。我得冷静，再投一把大的，一把就能回本！",
+      "bg": "pg2",
+      "show_characters": ["xiaxia"]
+    },
+    {
+      "role": "老蛋",
+      "content": "对！来，1000！我帮你盯着，一把回本！",
+      "bg": "pg2",
+      "show_characters": ["laodan"]
+    },
+    {
+      "type": "choice",
+      "content": "老蛋怂恿你继续充值1000元，这是你半个月的生活费，你要听他的吗？",
+      "bg": "pg2",
+      "options": [
+        {
+          "text": "【投1000元】听老蛋的，一把回本！",
+          "next": 48
+        },
+        {
+          "text": "【坚决拒绝】这是无底洞，我绝对不能再碰了！",
+          "next": 164
+        }
+      ]
+    },
+    {
+      "role": "系统",
+      "content": "【下注】1000元 → 输了！余额：0元",
+      "bg": "pg2",
+      "set_money": -1000
+    },
+    {
+      "role": "你",
+      "content": "这...这怎么办...那是我半个月的生活费啊...",
+      "bg": "pg2",
+      "show_characters": ["xiaxia"]
+    },
+    {
+      "role": "心理",
+      "content": "大脑一片空白，手心全是汗。那可是我辛辛苦苦兼职攒下的钱，怎么说没就没了...",
+      "bg": "pg2",
+      "show_characters": ["xiaxia"]
+    },
+    {
+      "role": "老蛋",
+      "content": "相信我！再投2000，一把就能回本！前面输的全都捞回来！",
+      "bg": "pg2",
+      "show_characters": ["laodan"]
+    },
+    {
+      "role": "心理",
+      "content": "2000元？我哪里还有那么多钱...等等，手机推送来了一条消息。",
+      "bg": "pg2",
+      "show_characters": ["xiaxia"]
+    },
+    {
+      "role": "系统",
+      "content": "【贷款广告】急用钱？秒批3万！低利息，随借随还！",
+      "bg": "pg2"
+    },
+    {
+      "role": "心理",
+      "content": "网贷...虽然知道不太好，但现在...就差这一把了...只要赢回来就收手！",
+      "bg": "pg2",
+      "show_characters": ["xiaxia"]
+    },
+    {
+      "role": "旁白",
+      "content": "你的手颤抖着，正要点开那个贷款广告...",
+      "bg": "pg2"
+    },
+    {
+      "role": "小高",
+      "content": "小夏！你在干嘛！",
+      "bg": "pg2",
+      "show_characters": ["xiaogao"]
+    },
+    {
+      "role": "旁白",
+      "content": "小高是你的室友，平时话不多，但人很正直。他刚打完篮球回来。",
+      "bg": "pg2"
+    },
+    {
+      "role": "小高",
+      "content": "这是什么？小夏你...你在赌博？！",
+      "bg": "pg2",
+      "show_characters": ["xiaogao"]
+    },
+    {
+      "role": "老蛋",
+      "content": "小高你别瞎说！这叫理财，懂不懂！",
+      "bg": "pg2",
+      "show_characters": ["laodan"]
+    },
+    {
+      "role": "小高",
+      "content": "小夏！这是网络赌博！是诈骗！你快醒醒！",
+      "bg": "pg2",
+      "show_characters": ["xiaogao"]
+    },
+    {
+      "role": "心理",
+      "content": "小高的话像一盆冷水浇在我头上。老蛋说再投一把就能回本...但小高说得对吗？",
+      "bg": "pg2",
+      "show_characters": ["xiaxia"]
+    },
+    {
+      "role": "老蛋",
+      "content": "小高你少管闲事！这是我和小夏之间的事！",
+      "bg": "pg2",
+      "show_characters": ["laodan"]
+    },
+    {
+      "role": "小高",
+      "content": "我就是要管！小夏，我们是好室友，我不能眼睁睁看你被骗！",
+      "bg": "pg2",
+      "show_characters": ["xiaogao"]
+    },
+    {
+      "role": "心理",
+      "content": "小高说得有道理...但老蛋承诺我能回本...我已经输了两千了啊...就差这一把...",
+      "bg": "pg2",
+      "show_characters": ["xiaxia"]
+    },
+    {
+      "role": "小高",
+      "content": "小夏！你想想，这种APP不正规，后台肯定能操控的！他们就是专门骗你们想赚钱的心理！",
+      "bg": "pg2",
+      "show_characters": ["xiaogao"]
+    },
+    {
+      "role": "老蛋",
+      "content": "你懂什么！我前两天不是刚提现200吗！",
+      "bg": "pg2",
+      "show_characters": ["laodan"]
+    },
+    {
+      "role": "小高",
+      "content": "那叫'甜头'！先用小利诱惑你，等你上瘾了加大赌注，然后让你输光！这套路我见多了！",
+      "bg": "pg2",
+      "show_characters": ["xiaogao"]
+    },
+    {
+      "role": "心理",
+      "content": "小高的话...好像也有道理...但我真的好想把输的钱赢回来啊...",
+      "bg": "pg2",
+      "show_characters": ["xiaxia"]
+    },
+    {
+      "type": "choice",
+      "content": "【紧急抉择】你已经输了2000元，老蛋催你继续翻本，小高拼命劝阻...\n\n💰 当前损失：2000元 | ⏰ 距离月底还有15天",
+      "bg": "pg2",
+      "options": [
+        {
+          "text": "【暂时离场】我需要冷静一下...出去走走想想",
+          "next": 70,
+          "set_flag": "take_break"
+        },
+        {
+          "text": "【报警求助】这肯定是诈骗！我要报警！",
+          "next": 120,
+          "set_flag": "call_police"
+        },
+        {
+          "text": "【找辅导员商量】我先去找辅导员问问...",
+          "next": 135,
+          "set_flag": "ask_counselor"
+        }
+      ]
+    },
+    {
+      "role": "你",
+      "content": "我...我需要冷静一下...",
+      "bg": "pg2",
+      "show_characters": ["xiaxia"]
+    },
+    {
+      "role": "小高",
+      "content": "去吧小夏，我等你。操场那边安静，去吹吹风清醒一下。",
+      "bg": "pg2",
+      "show_characters": ["xiaogao"]
+    },
+    {
+      "role": "旁白",
+      "content": "你站起身，走出宿舍，来到了操场。夜晚的风吹在脸上，让你清醒了许多。",
+      "bg": "playground"
+    },
+    {
+      "role": "心理",
+      "content": "星星很亮，月光洒在操场上。手机上的网贷广告还在闪烁...",
+      "bg": "playground",
+      "show_characters": ["xiaxia"]
+    },
+    {
+      "role": "心理",
+      "content": "老蛋让我借网贷翻本，小高劝我赶紧收手...我到底该怎么选？",
+      "bg": "playground",
+      "show_characters": ["xiaxia"]
+    },
+    {
+      "type": "choice",
+      "content": "夜风中你逐渐冷静下来，你要如何决断？",
+      "bg": "playground",
+      "options": [
+        {
+          "text": "【借网贷翻本】老蛋说得对，再试一次！一把就能回本！",
+          "next": 76,
+          "set_flag": "all_in"
+        },
+        {
+          "text": "【听小高劝导】小高说得对，我不能再赌了！删掉APP！",
+          "next": 94,
+          "set_flag": "listen_to_xiaogao"
+        }
+      ]
+    },
+    {
+      "role": "你",
+      "content": "老蛋...我再试最后一次！",
+      "bg": "pg3",
+      "show_characters": ["xiaxia"]
+    },
+    {
+      "role": "老蛋",
+      "content": "这就对了！来，下载这个贷款APP，3000秒批！一把翻盘！",
+      "bg": "pg3",
+      "show_characters": ["laodan"]
+    },
+    {
+      "role": "心理",
+      "content": "我咬咬牙，手指颤抖着下载了那个网贷APP。3000元，秒批到账。",
+      "bg": "pg3",
+      "show_characters": ["xiaxia"]
+    },
+    {
+      "role": "系统",
+      "content": "【网贷到账】3000元已到账",
+      "bg": "pg3"
+    },
+    {
+      "role": "老蛋",
+      "content": "快！全压上！这一把定输赢！",
+      "bg": "pg3",
+      "show_characters": ["laodan"]
+    },
+    {
+      "role": "系统",
+      "content": "【全部下注】3000元 → 输了！余额：0元",
+      "bg": "pg3",
+      "set_money": -3000
+    },
+    {
+      "role": "心理",
+      "content": "屏幕上那个刺眼的0，像一把刀插进了我的心脏。5000块...我欠了5000块...",
+      "bg": "pg3",
+      "show_characters": ["xiaxia"]
+    },
+    {
+      "role": "你",
+      "content": "老蛋...老蛋？",
+      "bg": "pg3",
+      "show_characters": ["xiaxia"]
+    },
+    {
+      "role": "旁白",
+      "content": "你回头看向老蛋，发现他正在收拾东西。",
+      "bg": "pg3"
+    },
+    {
+      "role": "老蛋",
+      "content": "这...这不可能...系统肯定有问题...我...我先走了，有点事，改天再聊...",
+      "bg": "pg3",
+      "show_characters": ["laodan"]
+    },
+    {
+      "role": "旁白",
+      "content": "老蛋的背影消失在宿舍门口，他甚至没回头看你一眼。",
+      "bg": "pg3"
+    },
+    {
+      "role": "旁白",
+      "content": "你再打开那个APP，发现已经登录不了了。",
+      "bg": "pg3"
+    },
+    {
+      "role": "旁白",
+      "content": "老蛋消失了，APP也登不上了。你不仅输光了生活费，还欠了5000元网贷。",
+      "bg": "pg3"
+    },
+    {
+      "role": "心理",
+      "content": "我瘫坐在椅子上，眼泪不受控制地流了下来。这一切，都只是一场精心策划的骗局...\n\n小高说得对...我应该听他的...",
+      "bg": "pg3",
+      "show_characters": ["xiaxia"]
+    },
+    {
+      "role": "旁白",
+      "content": "手机不断收到贷款公司的催款短信...",
+      "bg": "pg3"
+    },
+    {
+      "role": "系统",
+      "content": "【催款提醒】您有一笔3000元贷款已逾期，请尽快还款！",
+      "bg": "pg3"
+    },
+    {
+      "role": "心理",
+      "content": "我该怎么办...我该怎么跟爸妈说...",
+      "bg": "pg3",
+      "show_characters": ["xiaxia"]
+    },
+    {
+      "type": "ending",
+      "ending_id": "gambling_abyss",
+      "ending_name": "深渊难爬",
+      "ending_type": "bad",
+      "content": "那笔生活费，是你省吃俭用攒下的梦想。现在，它们连同你的理智一起，消失在了虚拟的赌局中。\n\n你不仅输光了所有积蓄，还背负了3000元的网贷。\n\n—— 结局：深渊难爬 ——\n\n🔴 网络赌博十赌九输！那些让你尝甜头的运气，都是精心设计的陷阱。\n\n💡 反诈提示：\n• 任何稳赚不赔的投资都是骗局\n• 网贷只会让你越陷越深\n• 遇到疑似诈骗，请立即拨打 96110\n• 真正的朋友会阻止你犯错，而不是怂恿你冒险",
+      "bg": "pg3"
+    },
+    {
+      "role": "你",
+      "content": "小高...你说得对！我不能再赌了！",
+      "bg": "index",
+      "show_characters": ["xiaxia"]
+    },
+    {
+      "role": "小高",
+      "content": "太好了小夏！你终于想通了！",
+      "bg": "index",
+      "show_characters": ["xiaogao"]
+    },
+    {
+      "role": "你",
+      "content": "可是...我已经输了2000块了...那是我两个月的生活费...",
+      "bg": "index",
+      "show_characters": ["xiaxia"]
+    },
+    {
+      "role": "小高",
+      "content": "钱没了可以再赚，人要是陷进去就完了！走，我带你去找辅导员！这种事不能瞒着！",
+      "bg": "index",
+      "show_characters": ["xiaogao"]
+    },
+    {
+      "role": "旁白",
+      "content": "你果断删除了那个害人的APP。",
+      "bg": "index"
+    },
+    {
+      "role": "老蛋",
+      "content": "你们...唉，算了算了！",
+      "bg": "index",
+      "show_characters": ["laodan"]
+    },
+    {
+      "role": "小高",
+      "content": "小夏，走，我带你去找辅导员！",
+      "bg": "index",
+      "show_characters": ["xiaogao"]
+    },
+    {
+      "role": "旁白",
+      "content": "你深吸一口气，跟着小高一起来到辅导员办公室。",
+      "bg": "counselor_office"
+    },
+    {
+      "role": "旁白",
+      "content": "辅导员认真听完你们的讲述，表情严肃。",
+      "bg": "counselor_office"
+    },
+    {
+      "role": "辅导员",
+      "content": "小夏，你能及时醒悟，这很好！但这件事不能就这么算了，我们必须去保卫处报案。",
+      "bg": "counselor_office",
+      "show_characters": ["fudaoyuan"]
+    },
+    {
+      "role": "你",
+      "content": "导员，我...我真的被骗了吗？那个老蛋...他是故意的？",
+      "bg": "counselor_office",
+      "show_characters": ["xiaxia"]
+    },
+    {
+      "role": "辅导员",
+      "content": "孩子，根据你说的情况，这很可能是网络赌博诈骗。那个'老蛋'很可能就是诈骗集团的托儿。",
+      "bg": "counselor_office",
+      "show_characters": ["fudaoyuan"]
+    },
+    {
+      "role": "辅导员",
+      "content": "走，我们去保卫处报案。记住，被骗不是你的错！",
+      "bg": "counselor_office",
+      "show_characters": ["fudaoyuan"]
+    },
+    {
+      "role": "旁白",
+      "content": "你们来到了学校保卫处。保卫处老师认真地记录了案情。",
+      "bg": "security_office"
+    },
+    {
+      "role": "保卫处老师",
+      "content": "同学，你能及时止损，这是非常明智的决定！这种网络赌博诈骗，后台都是可以操控输赢的，专门利用人们想赚快钱的心理。",
+      "bg": "security_office",
+      "show_characters": ["security_teacher"]
+    },
+    {
+      "role": "保卫处老师",
+      "content": "那个'老蛋'很可能就是诈骗集团的托儿。他们先让你赢钱建立信任，等你加大赌注就开始收割。",
+      "bg": "security_office",
+      "show_characters": ["security_teacher"]
+    },
+    {
+      "role": "你",
+      "content": "老师...那个APP真的能操控输赢吗？",
+      "bg": "security_office",
+      "show_characters": ["xiaxia"]
+    },
+    {
+      "role": "保卫处老师",
+      "content": "当然！这些APP从一开始就是为诈骗设计的。前面的'赢钱'只是诱饵，让你尝到甜头后加大投入，然后后台一改，你就输光了。",
+      "bg": "security_office",
+      "show_characters": ["security_teacher"]
+    },
+    {
+      "role": "保卫处老师",
+      "content": "记住，真正能挣钱的，只有踏实付出！以后遇到这种情况，一定要及时告诉老师或者报警。",
+      "bg": "security_office",
+      "show_characters": ["security_teacher"]
+    },
+    {
+      "role": "小高",
+      "content": "老师说得对！小夏，以后咱们一起勤工俭学，我帮你找份靠谱的兼职！",
+      "bg": "security_office",
+      "show_characters": ["xiaogao"]
+    },
+    {
+      "role": "心理",
+      "content": "虽然损失了2000元，但至少我清醒了过来。看着小高真诚的眼神，我知道，这才是真正的朋友。",
+      "bg": "security_office",
+      "show_characters": ["xiaxia"]
+    },
+    {
+      "role": "旁白",
+      "content": "后来你才知道，老蛋果然是被诈骗集团利用的托儿。",
+      "bg": "index"
+    },
+    {
+      "role": "真相",
+      "content": "那个APP是专门设计的赌博诈骗陷阱，后台可以随意操控输赢。",
+      "bg": "index"
+    },
+    {
+      "role": "小高",
+      "content": "幸好你及时止损！以后可别再贪小便宜了，有什么困难跟我说！",
+      "bg": "index",
+      "show_characters": ["xiaogao"]
+    },
+    {
+      "role": "你",
+      "content": "谢谢你小高，是你救了我...以后我一定踏实努力，再也不相信什么'轻松赚钱'了！",
+      "bg": "index",
+      "show_characters": ["xiaxia"]
+    },
+    {
+      "type": "ending",
+      "ending_id": "gambling_salvation",
+      "ending_name": "理性救赎",
+      "ending_type": "good",
+      "content": "你在关键时刻选择了相信朋友的善意劝导。理性战胜了贪婪，你保住了更多的积蓄。\n\n虽然损失了2000元，但你获得了更宝贵的东西——一个真心帮助你、阻止你犯错的朋友。\n\n—— 结局：理性救赎 ——\n\n🟢 恭喜你！你成功逃离了网络赌博陷阱！\n\n💡 反诈提示：\n• 真正的朋友会在你迷失时拉你一把\n• 遇到疑似诈骗，及时向老师、家长求助\n• 天上不会掉馅饼，踏实努力才是正道\n• 珍惜身边的良师益友！",
+      "bg": "index"
+    },
+    {
+      "role": "你",
+      "content": "老蛋，小高说得对...这肯定是诈骗！我要报警！",
+      "bg": "pg2",
+      "show_characters": ["xiaxia"]
+    },
+    {
+      "role": "老蛋",
+      "content": "你...你别冲动！报警干什么！这点小事至于吗！",
+      "bg": "pg2",
+      "show_characters": ["laodan"]
+    },
+    {
+      "role": "小高",
+      "content": "小夏说得对！这就是诈骗，必须报警！",
+      "bg": "pg2",
+      "show_characters": ["xiaogao"]
+    },
+    {
+      "role": "旁白",
+      "content": "你果断拨打了110，向警方说明了情况。警方高度重视，立即展开调查。",
+      "bg": "pg2"
+    },
+    {
+      "role": "系统",
+      "content": "【警方介入】经调查，该APP确为诈骗平台，已被依法查处。警方同时对辖区内高校发布预警。",
+      "bg": "pg2"
+    },
+    {
+      "role": "旁白",
+      "content": "由于你及时报警，警方不仅查封了诈骗平台，还帮助你追回了部分损失。",
+      "bg": "security_office"
+    },
+    {
+      "role": "旁白",
+      "content": "几天后，辅导员和保卫处老师特意来表扬你。",
+      "bg": "counselor_office"
+    },
+    {
+      "role": "辅导员",
+      "content": "小夏同学，你的警惕性很高！不仅保护了自己，还协助我们破获了这起诈骗案件！",
+      "bg": "counselor_office",
+      "show_characters": ["fudaoyuan"]
+    },
+    {
+      "role": "保卫处老师",
+      "content": "是啊，小夏，你做得对！以后同学们遇到类似的情况，都会以你为榜样！",
+      "bg": "security_office",
+      "show_characters": ["security_teacher"]
+    },
+    {
+      "role": "小高",
+      "content": "小夏，我为你骄傲！你真勇敢！",
+      "bg": "security_office",
+      "show_characters": ["xiaogao"]
+    },
+    {
+      "role": "你",
+      "content": "其实...多亏了小高当时提醒我。要不是他，我可能真的会冲动行事。",
+      "bg": "security_office",
+      "show_characters": ["xiaxia"]
+    },
+    {
+      "role": "辅导员",
+      "content": "你们两个都是好孩子！小夏勇敢，小高正直。希望你们的故事能提醒更多的同学！",
+      "bg": "counselor_office",
+      "show_characters": ["fudaoyuan"]
+    },
+    {
+      "role": "旁白",
+      "content": "学校特意在公告栏贴出了你的事迹，号召全体同学向你学习。",
+      "bg": "index"
+    },
+    {
+      "role": "心理",
+      "content": "虽然损失了部分钱，但我学到了更宝贵的一课：遇到问题要勇敢求助，正义永远不会缺席。",
+      "bg": "index",
+      "show_characters": ["xiaxia"]
+    },
+    {
+      "type": "ending",
+      "ending_id": "gambling_hero",
+      "ending_name": "反诈先锋",
+      "ending_type": "perfect",
+      "content": "你不仅保护了自己，还帮助警方端掉了一个诈骗窝点！你的勇敢行为不仅挽回了自身损失，更为校园反诈事业做出了贡献！\n\n—— 结局：反诈先锋 ——\n\n🟢🟢 完美结局！你展现了极高的反诈意识和社会责任感！\n\n💡 反诈提示：\n• 遇到疑似诈骗，请立即拨打 110 报警\n• 及时行动，既能保护自己，也能帮助他人\n• 勇敢举报诈骗行为，维护社会正义\n• 你的一个小举动，可能拯救更多人！",
+      "bg": "security_office"
+    },
+    {
+      "role": "你",
+      "content": "导员...我好像被骗了，我想问问您的意见...",
+      "bg": "counselor_office",
+      "show_characters": ["xiaxia"]
+    },
+    {
+      "role": "辅导员",
+      "content": "小夏，别慌。你详细跟我说说。",
+      "bg": "counselor_office",
+      "show_characters": ["fudaoyuan"]
+    },
+    {
+      "role": "你",
+      "content": "我...我在一个APP上玩了几把，开始赢了500，后来全输光了，现在老蛋还让我借网贷继续...",
+      "bg": "counselor_office",
+      "show_characters": ["xiaxia"]
+    },
+    {
+      "role": "辅导员",
+      "content": "这是典型的网络赌博诈骗！你马上停止操作，不要再碰那个APP。我们一起去保卫处报案。",
+      "bg": "counselor_office",
+      "show_characters": ["fudaoyuan"]
+    },
+    {
+      "role": "旁白",
+      "content": "辅导员带着你来到保卫处，保卫处老师详细记录了情况，并对你进行了反诈教育。",
+      "bg": "security_office"
+    },
+    {
+      "role": "保卫处老师",
+      "content": "幸好你没有继续借钱去赌。很多同学就是输红了眼，借网贷最后欠下巨债。你能主动找老师，已经很理智了。",
+      "bg": "security_office",
+      "show_characters": ["security_teacher"]
+    },
+    {
+      "role": "你",
+      "content": "那...我损失的钱还能追回来吗？",
+      "bg": "security_office",
+      "show_characters": ["xiaxia"]
+    },
+    {
+      "role": "保卫处老师",
+      "content": "我们会尽力，但更重要的是你吸取了教训。记住，任何承诺轻松赚钱的都是骗局。",
+      "bg": "security_office",
+      "show_characters": ["security_teacher"]
+    },
+    {
+      "role": "辅导员",
+      "content": "小夏，以后有困难先来找我，学校有助学贷款和勤工俭学岗位，千万不要再碰赌博了。",
+      "bg": "counselor_office",
+      "show_characters": ["fudaoyuan"]
+    },
+    {
+      "role": "心理",
+      "content": "虽然还是损失了2000元，但我感到如释重负。至少我没有陷入网贷深渊，还有辅导员和保卫处老师的帮助。",
+      "bg": "security_office",
+      "show_characters": ["xiaxia"]
+    },
+    {
+      "role": "旁白",
+      "content": "一周后，辅导员为你申请了临时困难补助，并介绍了图书馆的勤工助学岗位。你重新振作起来。",
+      "bg": "canteen"
+    },
+    {
+      "type": "ending",
+      "ending_id": "gambling_regret",
+      "ending_name": "迷途知返",
+      "ending_type": "normal",
+      "content": "你选择了向辅导员求助，虽然损失了2000元，但你避免了更严重的网贷陷阱。在学校帮助下，你重新走上了正轨。\n\n—— 结局：迷途知返 ——\n\n🟡 及时求助，避免深渊！\n\n💡 反诈提示：\n• 遇到可疑情况，第一时间告诉老师或家长\n• 学校永远是学生的坚强后盾\n• 不要因为害怕责骂而隐瞒，那只会让情况更糟\n• 96110 反诈专线，随时为你服务",
+      "bg": "canteen"
+    },
+    {
+      "role": "你",
+      "content": "老蛋，见好就收吧，我先把钱提出来。",
+      "bg": "pg1",
+      "show_characters": ["xiaxia"]
+    },
+    {
+      "role": "心理",
+      "content": "虽然赢了钱，但直觉告诉我，这种好事不会一直持续。",
+      "bg": "pg1",
+      "show_characters": ["xiaxia"]
+    },
+    {
+      "role": "老蛋",
+      "content": "别啊！这才刚开始！",
+      "bg": "pg1",
+      "show_characters": ["laodan"]
+    },
+    {
+      "role": "你",
+      "content": "不了，我还是稳妥点好。",
+      "bg": "pg1",
+      "show_characters": ["xiaxia"]
+    },
+    {
+      "role": "系统",
+      "content": "【提现】75元已转入你的账户",
+      "bg": "pg1"
+    },
+    {
+      "role": "旁白",
+      "content": "你果断删除了那个APP，把赢来的25元当作战利品。",
+      "bg": "pg1"
+    },
+    {
+      "role": "心理",
+      "content": "后来听说老蛋因为参与赌博诈骗被学校处分了。还好我及时收手，没有陷入更深的泥潭。",
+      "bg": "pg1",
+      "show_characters": ["xiaxia"]
+    },
+    {
+      "type": "ending",
+      "ending_id": "gambling_wisdom",
+      "ending_name": "明智抉择",
+      "ending_type": "perfect",
+      "content": "你在贪婪面前保持了清醒，选择见好就收。\n小小的利润，却让你躲过了一场巨大的骗局。\n\n—— 结局：明智抉择 ——\n\n🏆 恭喜你！你展现了极高的反诈意识！\n\n天上不会掉馅饼，任何轻松赚大钱的路子都可能是陷阱。\n保持警惕，才能守护好自己的财产安全！",
+      "bg": "pg1"
+    },
+    {
+      "role": "你",
+      "content": "算了，昨晚赢的几百块已经很幸运了，不能贪心，万一是连环套呢。",
+      "bg": "pg2",
+      "show_characters": ["xiaxia"]
+    },
+    {
+      "role": "旁白",
+      "content": "你克制住了内心的贪婪，果断卸载了APP。",
+      "bg": "pg2"
+    },
+    {
+      "role": "心理",
+      "content": "后来学校通报了这起网络赌博诈骗案，老蛋也被查出是平台的“托儿”。",
+      "bg": "pg2",
+      "show_characters": ["xiaxia"]
+    },
+    {
+      "role": "心理",
+      "content": "我惊出一身冷汗，幸好当时管住了自己的手。",
+      "bg": "pg2",
+      "show_characters": ["xiaxia"]
+    },
+    {
+      "type": "ending",
+      "ending_id": "gambling_reflection",
+      "ending_name": "悬崖勒马",
+      "ending_type": "good",
+      "content": "你在诱惑面前选择了理智，不仅保住了自己的本金，还白蹭了一顿大餐。\n\n—— 结局：悬崖勒马 ——\n\n🏆 恭喜你！你成功阻止了自己踏入陷阱！\n\n冲动是魔鬼，在做任何金钱投入前，给自己一点时间冷静思考。\n这是避免陷入骗局的重要一步！",
+      "bg": "pg2"
+    },
+    {
+      "role": "你",
+      "content": "不对劲...这APP像是个无底洞。就当这500块买个教训，我不玩了！",
+      "bg": "pg2",
+      "show_characters": ["xiaxia"]
+    },
+    {
+      "role": "旁白",
+      "content": "你强忍着心痛，果断卸载了APP。",
+      "bg": "pg2"
+    },
+    {
+      "role": "心理",
+      "content": "虽然损失了500元，但总比越陷越深好。后来警方通报证实了这是一个诈骗APP。",
+      "bg": "pg2",
+      "show_characters": ["xiaxia"]
+    },
+    {
+      "type": "ending",
+      "ending_id": "gambling_reflection",
+      "ending_name": "悬崖勒马",
+      "ending_type": "good",
+      "content": "你在连续的亏损中意识到了不对劲，立刻断臂求生。\n虽然损失了500元，但你保住了剩下的生活费。\n\n—— 结局：悬崖勒马 ——\n\n🏆 恭喜你！你成功阻止了自己越陷越深！\n\n及时止损是最高级的自律。发现被骗时停止投入，永远是最好的选择！",
+      "bg": "pg2"
+    },
+    {
+      "role": "你",
+      "content": "老蛋，你别骗我了！哪有什么包赢的！我不会再投一分钱了！",
+      "bg": "pg2",
+      "show_characters": ["xiaxia"]
+    },
+    {
+      "role": "旁白",
+      "content": "你愤怒地推开老蛋的手，当着他的面彻底删除了APP。",
+      "bg": "pg2"
+    },
+    {
+      "role": "心理",
+      "content": "虽然输了1000块，但我保住了剩下的生活费。如果继续听他的，我可能会去借网贷...",
+      "bg": "pg2",
+      "show_characters": ["xiaxia"]
+    },
+    {
+      "type": "ending",
+      "ending_id": "gambling_reflection",
+      "ending_name": "悬崖勒马",
+      "ending_type": "good",
+      "content": "尽管已经损失了1000元，但你在更大的无底洞前果断停住了脚步。\n\n—— 结局：悬崖勒马 ——\n\n🏆 恭喜你！你成功阻止了自己走向家破人亡！\n\n骗子往往会利用你“想回本”的不甘心来进行极限压榨，不赌，就是赢！",
+      "bg": "pg2"
+    }
+  ]
+}

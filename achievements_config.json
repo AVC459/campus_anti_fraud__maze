@@ -1,0 +1,164 @@
+{
+    "achievements": [
+        {
+            "id": "chapter1_ruin_complete",
+            "chapter": "chapter1",
+            "name": "彻底沉沦",
+            "description": "在第一章中达成『彻底沉沦』结局",
+            "icon": "💔",
+            "category": "bad"
+        },
+        {
+            "id": "chapter1_partial_loss",
+            "chapter": "chapter1",
+            "name": "半醒半梦",
+            "description": "在第一章中达成『半醒半梦』结局",
+            "icon": "😟",
+            "category": "medium"
+        },
+        {
+            "id": "chapter1_teacher_help",
+            "chapter": "chapter1",
+            "name": "老师出手",
+            "description": "在第一章中达成『老师出手』结局",
+            "icon": "👨‍🏫",
+            "category": "good"
+        },
+        {
+            "id": "chapter1_call_police",
+            "chapter": "chapter1",
+            "name": "报警成功",
+            "description": "在第一章中达成『报警成功』结局",
+            "icon": "🚔",
+            "category": "good"
+        },
+        {
+            "id": "chapter1_face_to_face",
+            "chapter": "chapter1",
+            "name": "火车站对峙",
+            "description": "在第一章中达成『火车站对峙』结局",
+            "icon": "🚉",
+            "category": "medium"
+        },
+        {
+            "id": "chapter1_refuse_transfer",
+            "chapter": "chapter1",
+            "name": "及时清醒",
+            "description": "在第一章中达成『及时清醒』结局",
+            "icon": "💡",
+            "category": "neutral"
+        },
+        {
+            "id": "chapter2_gambling_abyss",
+            "chapter": "chapter2",
+            "name": "深渊难爬",
+            "description": "在第二章中达成『深渊难爬』结局",
+            "icon": "😱",
+            "category": "bad"
+        },
+        {
+            "id": "chapter2_gambling_salvation",
+            "chapter": "chapter2",
+            "name": "理性救赎",
+            "description": "在第二章中达成『理性救赎』结局",
+            "icon": "😊",
+            "category": "good"
+        },
+        {
+            "id": "chapter2_gambling_reflection",
+            "chapter": "chapter2",
+            "name": "悬崖勒马",
+            "description": "在第二章中达成『悬崖勒马』结局",
+            "icon": "🙂",
+            "category": "good"
+        },
+        {
+            "id": "chapter2_gambling_wisdom",
+            "chapter": "chapter2",
+            "name": "明智抉择",
+            "description": "在第二章中达成『明智抉择』完美结局",
+            "icon": "🎯",
+            "category": "perfect"
+        },
+        {
+            "id": "chapter2_gambling_hero",
+            "chapter": "chapter2",
+            "name": "反诈先锋",
+            "description": "在第二章中达成『反诈先锋』完美结局",
+            "icon": "🏆",
+            "category": "perfect"
+        },
+        {
+            "id": "chapter2_gambling_regret",
+            "chapter": "chapter2",
+            "name": "迷途知返",
+            "description": "在第二章中达成『迷途知返』结局",
+            "icon": "🧭",
+            "category": "normal"
+        },
+        {
+            "id": "chapter3_loan_help",
+            "chapter": "chapter3",
+            "name": "绝处逢生",
+            "description": "在第三章中达成『绝处逢生』结局",
+            "icon": "🌟",
+            "category": "good"
+        },
+        {
+            "id": "chapter3_loan_late",
+            "chapter": "chapter3",
+            "name": "悔之晚矣",
+            "description": "在第三章中达成『悔之晚矣』结局",
+            "icon": "😢",
+            "category": "bad"
+        },
+        {
+            "id": "chapter3_loan_family",
+            "chapter": "chapter3",
+            "name": "家难临头",
+            "description": "在第三章中达成『家难临头』结局",
+            "icon": "😰",
+            "category": "bad"
+        },
+        {
+            "id": "chapter4_job_wisdom",
+            "chapter": "chapter4",
+            "name": "迷途知返",
+            "description": "在第四章中达成『迷途知返』结局",
+            "icon": "",
+            "category": "good"
+        },
+        {
+            "id": "chapter4_job_loss",
+            "chapter": "chapter4",
+            "name": "血本无归",
+            "description": "在第四章中达成『血本无归』结局",
+            "icon": "💸",
+            "category": "bad"
+        },
+        {
+            "id": "chapter4_job_defense",
+            "chapter": "chapter4",
+            "name": "保持警惕",
+            "description": "在第四章中达成『保持警惕』完美结局",
+            "icon": "🛡️",
+            "category": "perfect"
+        },
+        {
+            "id": "chapter4_job_early",
+            "chapter": "chapter4",
+            "name": "防微杜渐",
+            "description": "在第四章中达成『防微杜渐』完美结局",
+            "icon": "🔍",
+            "category": "perfect"
+        },
+        {
+            "id": "chapter_all_collector",
+            "chapter": "all",
+            "name": "完美收藏家",
+            "description": "解锁所有结局成就",
+            "icon": "👑",
+            "category": "special"
+        }
+    ]
+}
