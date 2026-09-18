@@ -31,7 +31,7 @@ Endings are tiered: `bad` means you sink completely, `perfect` means you not onl
 
 ## Download and play
 
-Grab **`反诈迷雾.exe`** from [Releases](../../releases/latest) — a single file, about 119 MB, **no Python installation required**. Just double-click it.
+Grab **`anti-fraud-maze.exe`** from [Releases](../../releases/latest) — a single file, about 119 MB, **no Python installation required**. Just double-click it. (Same build the spec produces as `反诈迷雾.exe`; the Release asset simply uses an ASCII filename.)
 
 On first launch it creates `achievements.json` (achievement progress) and `game_save.json` (save file) next to the executable.
 
@@ -212,7 +212,7 @@ Produces `dist/反诈迷雾.exe` — a single file that needs no Python installa
 <details>
 <summary><b>Why is there no exe in the repository?</b></summary>
 
-`反诈迷雾.exe` is about 119 MB, over GitHub's 100 MB per-file limit, so it lives on the [Releases](../../releases/latest) page instead. The full `.spec` is committed, so you can build an identical package with `pyinstaller` yourself.
+`anti-fraud-maze.exe` is about 119 MB, over GitHub's 100 MB per-file limit, so it lives on the [Releases](../../releases/latest) page instead. The full `.spec` is committed, so you can build an identical package with `pyinstaller` yourself.
 </details>
 
 <details>

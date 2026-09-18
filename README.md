@@ -31,7 +31,7 @@
 
 ## 下载即玩
 
-到 [Releases](../../releases/latest) 下载 **`反诈迷雾.exe`**（单文件，约 119 MB，**无需安装 Python 环境**），双击运行。
+到 [Releases](../../releases/latest) 下载 **`anti-fraud-maze.exe`**（单文件，约 119 MB，**无需安装 Python 环境**），双击运行 —— 它就是 `pyinstaller` 打包出的 `反诈迷雾.exe`，同一份文件，只是 Release 附件用了 ASCII 文件名。
 
 首次启动会在 exe 同级目录生成 `achievements.json`（成就进度）与 `game_save.json`（存档）。
 
@@ -212,7 +212,7 @@ pyinstaller 反诈迷雾.spec --clean --noconfirm
 <details>
 <summary><b>为什么仓库里没有 exe？</b></summary>
 
-`反诈迷雾.exe` 约 119 MB，超过 GitHub 单文件 100 MB 的限制，所以放在 [Releases](../../releases/latest) 而不是仓库里。仓库里保留了完整的 `.spec`，你自己 `pyinstaller` 也能打出同样的包。
+`anti-fraud-maze.exe` 约 119 MB，超过 GitHub 单文件 100 MB 的限制，所以放在 [Releases](../../releases/latest) 而不是仓库里。仓库里保留了完整的 `.spec`，你自己 `pyinstaller` 也能打出同样的包。
 </details>
 
 <details>
