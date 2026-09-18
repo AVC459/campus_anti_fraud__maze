@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 340" width="1200" height="340" role="img" aria-label="咸师反诈迷雾 · Campus Anti-Fraud Maze">
+  <title>咸师反诈迷雾 · Campus Anti-Fraud Maze</title>
+  <defs>
+    <linearGradient id="af-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#07101F"/>
+      <stop offset="1" stop-color="#12203A"/>
+    </linearGradient>
+    <linearGradient id="af-accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#22D3EE"/>
+      <stop offset="0.55" stop-color="#FBBF24"/>
+      <stop offset="1" stop-color="#F87171"/>
+    </linearGradient>
+    <pattern id="af-grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0V40" fill="none" stroke="#1E293B" stroke-width="1" opacity="0.5"/>
+    </pattern>
+    <radialGradient id="af-fog" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#94A3B8" stop-opacity="0.16"/>
+      <stop offset="1" stop-color="#94A3B8" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="1200" height="340" rx="18" fill="url(#af-bg)"/>
+  <rect width="1200" height="340" rx="18" fill="url(#af-grid)"/>
+  <ellipse cx="900" cy="170" rx="300" ry="200" fill="url(#af-fog)"/>
+
+  <text x="64" y="98" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="14" letter-spacing="3.4" fill="#64748B">TKINTER · TEXT ADVENTURE</text>
+
+  <text x="62" y="168" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="56" font-weight="700" fill="url(#af-accent)">咸师反诈迷雾</text>
+
+  <text x="64" y="204" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="20" letter-spacing="0.6" fill="#94A3B8">Campus Anti-Fraud Maze</text>
+
+  <text x="64" y="240" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="18" fill="#E2E8F0">4 个章节 · 430 个剧情节点 · 21 个结局节点</text>
+
+  <rect x="64" y="272" width="128" height="34" rx="17" fill="#0B1729" stroke="#1E3A5F"/>
+  <text x="128" y="294" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="15" fill="#94A3B8">Python 3.11</text>
+
+  <rect x="204" y="272" width="166" height="34" rx="17" fill="#0B1729" stroke="#1E3A5F"/>
+  <text x="287" y="294" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="15" fill="#94A3B8">Tkinter + Pygame</text>
+
+  <rect x="382" y="272" width="140" height="34" rx="17" fill="#0B1729" stroke="#1E3A5F"/>
+  <text x="452" y="294" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="15" fill="#94A3B8">公益反诈 · 免费</text>
+
+  <!-- 右侧：分支剧情图谱 -->
+  <g stroke-linecap="round" fill="none">
+    <path d="M740 170H800" stroke="#334155" stroke-width="2"/>
+    <path d="M800 170L870 96" stroke="#334155" stroke-width="2"/>
+    <path d="M800 170L870 170" stroke="#334155" stroke-width="2"/>
+    <path d="M800 170L870 246" stroke="#334155" stroke-width="2"/>
+    <path d="M870 170L950 132" stroke="#334155" stroke-width="2"/>
+    <path d="M870 170L950 208" stroke="#334155" stroke-width="2"/>
+    <path d="M870 96L1000 70" stroke="#334155" stroke-width="2"/>
+    <path d="M870 246L1000 268" stroke="#334155" stroke-width="2"/>
+    <path d="M950 132L1060 100" stroke="#334155" stroke-width="2"/>
+    <path d="M950 208L1060 240" stroke="#334155" stroke-width="2"/>
+    <path d="M1000 70L1090 56" stroke="#334155" stroke-width="2"/>
+    <path d="M1000 268L1090 286" stroke="#334155" stroke-width="2"/>
+  </g>
+  <circle cx="740" cy="170" r="11" fill="#22D3EE"/>
+  <circle cx="740" cy="170" r="18" fill="none" stroke="#22D3EE" stroke-width="1.5" opacity="0.45"/>
+  <circle cx="870" cy="96" r="8" fill="#10B981"/>
+  <circle cx="870" cy="170" r="8" fill="#F59E0B"/>
+  <circle cx="870" cy="246" r="8" fill="#EF4444"/>
+  <circle cx="950" cy="132" r="7" fill="#10B981"/>
+  <circle cx="950" cy="208" r="7" fill="#EF4444"/>
+  <circle cx="1000" cy="70" r="7" fill="#22D3EE"/>
+  <circle cx="1000" cy="268" r="7" fill="#EF4444"/>
+  <circle cx="1060" cy="100" r="6" fill="#10B981"/>
+  <circle cx="1060" cy="240" r="6" fill="#F59E0B"/>
+  <circle cx="1090" cy="56" r="6" fill="#22D3EE"/>
+  <circle cx="1090" cy="286" r="6" fill="#64748B"/>
+
+  <text x="1030" y="322" text-anchor="end" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="13" fill="#475569">每个分叉都是一次选择，绿灯才不会掉进坑里</text>
+</svg>
